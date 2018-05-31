@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class StartUI : MonoBehaviour {
 
-	// Use this for initialization
-	void Start ()
+
+    public void StartGame()
     {
+
         SceneManager.LoadScene("Sorry_Board_1");
+
     }
 	
 
