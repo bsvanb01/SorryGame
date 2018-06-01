@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2A849853-20F2-69F8-DEAB-A6249C1F92AB}</ProjectGuid>
+    <ProjectGuid>{75E44D41-8786-1AE8-EA1A-9052DF115CFF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,7 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\Scripts\CardDeck.cs" />
+     <Compile Include="Assets\Scripts\PieceManager1.cs" />
+     <Compile Include="Assets\Scripts\PieceManager2.cs" />
+     <Compile Include="Assets\Scripts\PieceManager3.cs" />
+     <Compile Include="Assets\Scripts\PieceManager4.cs" />
      <Compile Include="Assets\Scripts\StartUI.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
