@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/bvanburen/Desktop/SorryGame-BradBranch/Assets/_Scenes/Sorry_Board_1.unity
+- path: Assets/_Scenes/Sorry_Board_1.unity
   isLoaded: 1
   isActive: 1
