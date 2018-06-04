@@ -15,7 +15,7 @@ public class CardDeck : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject.FindGameObjectWithTag("MainCamera").transform.Translate(1, -2, 15);
+            GameObject.FindGameObjectWithTag("MainCamera").transform.Translate(3, 0, 15);
             card = drawCard();
             updateCard(card);
             Invoke("zoomOut", 3.5f);
@@ -24,7 +24,7 @@ public class CardDeck : MonoBehaviour {
 
     public void zoomOut()
     {
-        GameObject.FindGameObjectWithTag("MainCamera").transform.Translate(-1, 2, -15);
+        GameObject.FindGameObjectWithTag("MainCamera").transform.Translate(-3, 0, -15);
     }
 
     public void zoomIn()
