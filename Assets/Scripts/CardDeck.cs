@@ -54,7 +54,7 @@ public class CardDeck : MonoBehaviour {
     {
 
         Renderer renderer = GetComponent<Renderer>();
-        Material myMaterial = renderer.material;
+        //Material myMaterial = renderer.material;
         if (renderer != null)
         {
             switch (card)
