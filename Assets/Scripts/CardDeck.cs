@@ -10,11 +10,14 @@ public class CardDeck : MonoBehaviour {
     public List<int> curDeck = orgDeck;
     public int card;
     public Material[] materialsArray = new Material[11];
+    public static int cardCount;
 
     public void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+
+        if (Input.GetMouseButtonDown(0) && cardCount == 0)
         {
+            cardCount = 1;
             GameObject.FindGameObjectWithTag("MainCamera").transform.Translate(3, 0, 15);
             card = drawCard();
             updateCard(card);
@@ -54,7 +57,6 @@ public class CardDeck : MonoBehaviour {
     {
 
         Renderer renderer = GetComponent<Renderer>();
-        //Material myMaterial = renderer.material;
         if (renderer != null)
         {
             switch (card)
