@@ -8,6 +8,10 @@ TagManager:
   - Player4Piece2
   - Player4Piece3
   - Player4Piece4
+  - Normal
+  - Safe
+  - Start
+  - Home
   layers:
   - Default
   - TransparentFX

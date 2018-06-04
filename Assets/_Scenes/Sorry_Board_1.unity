@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 1217800}
   m_Layer: 0
   m_Name: Space39
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 7757317}
   m_Layer: 0
   m_Name: Space57
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 52627293}
   m_Layer: 0
   m_Name: Space3
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 55563050}
   m_Layer: 0
   m_Name: Space58
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 94954844}
   m_Layer: 0
   m_Name: Space7
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 101438989}
   m_Layer: 0
   m_Name: Space52
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -814,6 +814,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
+      propertyPath: m_TagString
+      value: Start
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
   m_IsPrefabParent: 0
@@ -830,7 +834,7 @@ GameObject:
   - component: {fileID: 128678096}
   m_Layer: 0
   m_Name: Space21
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -914,7 +918,7 @@ GameObject:
   - component: {fileID: 138548579}
   m_Layer: 0
   m_Name: Space12
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -998,7 +1002,7 @@ GameObject:
   - component: {fileID: 157519251}
   m_Layer: 0
   m_Name: Space27
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1132,6 +1136,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
+      propertyPath: m_TagString
+      value: Start
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
   m_IsPrefabParent: 0
@@ -1183,7 +1191,7 @@ GameObject:
   - component: {fileID: 217067162}
   m_Layer: 0
   m_Name: Space35
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1312,7 +1320,7 @@ GameObject:
   - component: {fileID: 222069183}
   m_Layer: 0
   m_Name: Space2
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1771,7 +1779,7 @@ GameObject:
   - component: {fileID: 414377603}
   m_Layer: 0
   m_Name: Space53
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1855,7 +1863,7 @@ GameObject:
   - component: {fileID: 417215010}
   m_Layer: 0
   m_Name: Space36
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1939,7 +1947,7 @@ GameObject:
   - component: {fileID: 421060285}
   m_Layer: 0
   m_Name: Space18
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2135,6 +2143,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
+      propertyPath: m_TagString
+      value: Start
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
   m_IsPrefabParent: 0
@@ -2186,7 +2198,7 @@ GameObject:
   - component: {fileID: 505595602}
   m_Layer: 0
   m_Name: Space20
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2270,7 +2282,7 @@ GameObject:
   - component: {fileID: 506077213}
   m_Layer: 0
   m_Name: Space6
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2389,7 +2401,7 @@ GameObject:
   - component: {fileID: 527234232}
   m_Layer: 0
   m_Name: Space33
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2688,7 +2700,7 @@ GameObject:
   - component: {fileID: 561856502}
   m_Layer: 0
   m_Name: Space50
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2772,7 +2784,7 @@ GameObject:
   - component: {fileID: 594387077}
   m_Layer: 0
   m_Name: Space15
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2856,7 +2868,7 @@ GameObject:
   - component: {fileID: 612844570}
   m_Layer: 0
   m_Name: Space56
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3044,7 +3056,7 @@ GameObject:
   - component: {fileID: 618089909}
   m_Layer: 0
   m_Name: Space44
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3128,7 +3140,7 @@ GameObject:
   - component: {fileID: 629134586}
   m_Layer: 0
   m_Name: Space38
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3381,7 +3393,7 @@ GameObject:
   - component: {fileID: 713434006}
   m_Layer: 0
   m_Name: Space54
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3513,7 +3525,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 9a9d5672e75a0bf45ad3aecd0762ecb6, type: 2}
     - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_TagString
-      value: Player4Piece4
+      value: Start
       objectReference: {fileID: 0}
     - target: {fileID: 6400000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_Enabled
@@ -3535,7 +3547,7 @@ GameObject:
   - component: {fileID: 738466700}
   m_Layer: 0
   m_Name: Space25
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3725,7 +3737,7 @@ GameObject:
   - component: {fileID: 767380802}
   m_Layer: 0
   m_Name: Space47
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3903,6 +3915,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
+      propertyPath: m_TagString
+      value: Start
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
   m_IsPrefabParent: 0
@@ -3919,7 +3935,7 @@ GameObject:
   - component: {fileID: 787764150}
   m_Layer: 0
   m_Name: Space49
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4003,7 +4019,7 @@ GameObject:
   - component: {fileID: 818649450}
   m_Layer: 0
   m_Name: Space9
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4087,7 +4103,7 @@ GameObject:
   - component: {fileID: 861555788}
   m_Layer: 0
   m_Name: Space16
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4171,7 +4187,7 @@ GameObject:
   - component: {fileID: 870825673}
   m_Layer: 0
   m_Name: Space30
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4255,7 +4271,7 @@ GameObject:
   - component: {fileID: 940943409}
   m_Layer: 0
   m_Name: Space26
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4517,7 +4533,7 @@ GameObject:
   - component: {fileID: 989602238}
   m_Layer: 0
   m_Name: Space51
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4683,7 +4699,7 @@ GameObject:
   - component: {fileID: 1019421047}
   m_Layer: 0
   m_Name: Space42
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4802,7 +4818,7 @@ GameObject:
   - component: {fileID: 1039070475}
   m_Layer: 0
   m_Name: Space11
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4934,7 +4950,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 9a9d5672e75a0bf45ad3aecd0762ecb6, type: 2}
     - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_TagString
-      value: Player4Piece1
+      value: Start
       objectReference: {fileID: 0}
     - target: {fileID: 6400000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_Enabled
@@ -5095,7 +5111,7 @@ GameObject:
   - component: {fileID: 1135953013}
   m_Layer: 0
   m_Name: Space41
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5179,7 +5195,7 @@ GameObject:
   - component: {fileID: 1161528681}
   m_Layer: 0
   m_Name: Space17
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5344,6 +5360,10 @@ Prefab:
     - target: {fileID: 6400000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
+      propertyPath: m_TagString
+      value: Start
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
@@ -5590,7 +5610,7 @@ GameObject:
   - component: {fileID: 1260035445}
   m_Layer: 0
   m_Name: Space59
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5674,7 +5694,7 @@ GameObject:
   - component: {fileID: 1272329547}
   m_Layer: 0
   m_Name: Space0
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5758,7 +5778,7 @@ GameObject:
   - component: {fileID: 1275103994}
   m_Layer: 0
   m_Name: Space37
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5927,6 +5947,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
+      propertyPath: m_TagString
+      value: Start
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
   m_IsPrefabParent: 0
@@ -6067,7 +6091,7 @@ GameObject:
   - component: {fileID: 1376754633}
   m_Layer: 0
   m_Name: Space28
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6357,7 +6381,7 @@ GameObject:
   - component: {fileID: 1424764588}
   m_Layer: 0
   m_Name: Space8
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6491,6 +6515,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
+      propertyPath: m_TagString
+      value: Start
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
   m_IsPrefabParent: 0
@@ -6542,7 +6570,7 @@ GameObject:
   - component: {fileID: 1467216876}
   m_Layer: 0
   m_Name: Space34
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6626,7 +6654,7 @@ GameObject:
   - component: {fileID: 1470987484}
   m_Layer: 0
   m_Name: Space55
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6710,7 +6738,7 @@ GameObject:
   - component: {fileID: 1486459784}
   m_Layer: 0
   m_Name: Space22
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6940,7 +6968,7 @@ GameObject:
   - component: {fileID: 1569792869}
   m_Layer: 0
   m_Name: Space40
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7135,7 +7163,7 @@ GameObject:
   - component: {fileID: 1583026761}
   m_Layer: 0
   m_Name: Space29
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7219,7 +7247,7 @@ GameObject:
   - component: {fileID: 1674040102}
   m_Layer: 0
   m_Name: Space43
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7299,7 +7327,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -94
+      value: -93.999985
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7331,15 +7359,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.1952355
+      value: 1.1952356
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.1952355
+      value: 1.1952356
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.1952355
+      value: 1.1952356
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_Name
@@ -7351,7 +7379,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 9a9d5672e75a0bf45ad3aecd0762ecb6, type: 2}
     - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_TagString
-      value: Player4Piece2
+      value: Start
       objectReference: {fileID: 0}
     - target: {fileID: 6400000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_Enabled
@@ -7373,7 +7401,7 @@ GameObject:
   - component: {fileID: 1689177562}
   m_Layer: 0
   m_Name: Space13
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7607,7 +7635,7 @@ GameObject:
   - component: {fileID: 1710708126}
   m_Layer: 0
   m_Name: Space46
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7741,6 +7769,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
+      propertyPath: m_TagString
+      value: Start
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
   m_IsPrefabParent: 0
@@ -7861,7 +7893,7 @@ GameObject:
   - component: {fileID: 1762841447}
   m_Layer: 0
   m_Name: Space45
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7945,7 +7977,7 @@ GameObject:
   - component: {fileID: 1767988756}
   m_Layer: 0
   m_Name: Space14
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8079,6 +8111,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
+      propertyPath: m_TagString
+      value: Start
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
   m_IsPrefabParent: 0
@@ -8095,7 +8131,7 @@ GameObject:
   - component: {fileID: 1777133226}
   m_Layer: 0
   m_Name: Space1
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8403,6 +8439,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
+      propertyPath: m_TagString
+      value: Start
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
   m_IsPrefabParent: 0
@@ -8419,7 +8459,7 @@ GameObject:
   - component: {fileID: 1882546252}
   m_Layer: 0
   m_Name: Space24
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8689,6 +8729,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
+      propertyPath: m_TagString
+      value: Start
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
   m_IsPrefabParent: 0
@@ -8705,7 +8749,7 @@ GameObject:
   - component: {fileID: 1989633009}
   m_Layer: 0
   m_Name: Space48
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8789,7 +8833,7 @@ GameObject:
   - component: {fileID: 1992989259}
   m_Layer: 0
   m_Name: Space32
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8977,7 +9021,7 @@ GameObject:
   - component: {fileID: 2003990051}
   m_Layer: 0
   m_Name: Space5
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9274,7 +9318,7 @@ GameObject:
   - component: {fileID: 2024357323}
   m_Layer: 0
   m_Name: Space23
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9358,7 +9402,7 @@ GameObject:
   - component: {fileID: 2032473613}
   m_Layer: 0
   m_Name: Space4
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9551,7 +9595,7 @@ GameObject:
   - component: {fileID: 2068053736}
   m_Layer: 0
   m_Name: Space31
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9683,7 +9727,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 9a9d5672e75a0bf45ad3aecd0762ecb6, type: 2}
     - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_TagString
-      value: Player4Piece3
+      value: Start
       objectReference: {fileID: 0}
     - target: {fileID: 6400000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_Enabled
@@ -9790,6 +9834,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
+      propertyPath: m_TagString
+      value: Start
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
   m_IsPrefabParent: 0
@@ -9850,7 +9898,7 @@ GameObject:
   - component: {fileID: 2142133652}
   m_Layer: 0
   m_Name: Space10
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10038,7 +10086,7 @@ GameObject:
   - component: {fileID: 2147216763}
   m_Layer: 0
   m_Name: Space19
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
