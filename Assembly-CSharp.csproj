@@ -58,6 +58,22 @@
      <Compile Include="Assets\Scripts\PieceManager2.cs" />
      <Compile Include="Assets\Scripts\PieceManager3.cs" />
      <Compile Include="Assets\Scripts\PieceManager4.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player1Piece1.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player1Piece2.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player1Piece3.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player1Piece4.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player2Piece1.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player2Piece2.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player2Piece3.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player2Piece4.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player3Piece1.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player3Piece2.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player3Piece3.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player3Piece4.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player4Piece1.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player4Piece2.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player4Piece3.cs" />
+     <Compile Include="Assets\Scripts\Pieces\Player4Piece4.cs" />
      <Compile Include="Assets\Scripts\StartUI.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
