@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using System.Collections;
 
 using UnityEngine.UI;
 public class CardDeck : MonoBehaviour {
@@ -11,18 +12,27 @@ public class CardDeck : MonoBehaviour {
     public List<int> curDeck = orgDeck;
     public int card;
     public Material[] materialsArray = new Material[11];
-    public static int cardCount;
+    public static int cardCount = 0;
 
     public void Update()
     {
-
-        if (Input.GetMouseButtonDown(0) && cardCount == 0)
+        if (Input.GetMouseButtonDown(0))
         {
-            cardCount = 1;
-            GameObject.FindGameObjectWithTag("MainCamera").transform.Translate(3, 0, 15);
-            card = drawCard();
-            updateCard(card);
-            Invoke("zoomOut", 3.5f);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {                
+                if (hit.transform.name == "Card (15)" && cardCount == 0)
+                    {
+                    Debug.Log("Hit the card");
+                    cardCount = 1;
+                    GameObject.FindGameObjectWithTag("MainCamera").transform.Translate(3, 0, 15);
+                    card = drawCard();
+                    updateCard(card);
+                    Invoke("zoomOut", 3.5f);
+                }
+            }
         }
     }
 
