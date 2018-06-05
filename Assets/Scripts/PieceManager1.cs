@@ -9,6 +9,7 @@ public class PieceManager1 : MonoBehaviour {
     [SerializeField] private GameObject p1Piece2;
     [SerializeField] private GameObject p1Piece3;
     [SerializeField] private GameObject p1Piece4;
+    public static bool player1Active = false;
     // Use this for initialization
     void Start () {
 		

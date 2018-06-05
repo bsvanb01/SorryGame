@@ -9,6 +9,7 @@ public class PieceManager4 : MonoBehaviour {
     [SerializeField] private GameObject p4Piece2;
     [SerializeField] private GameObject p4Piece3;
     [SerializeField] private GameObject p4Piece4;
+    public static bool player4Active = false;
 
     public float movespeed;
     private Vector3 Direction;

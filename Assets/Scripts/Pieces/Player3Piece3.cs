@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player3Piece3 : MonoBehaviour {
+public class Player3Piece3 : MonoBehaviour
+{
 
     public int curSquare = 70;
-    public bool p3p3Active = true;
 
     void Start()
     {
@@ -14,21 +14,30 @@ public class Player3Piece3 : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && p3p3Active)
+        if (Input.GetMouseButtonDown(0))
         {
-            bool buttonClicked = false;
-            GameManager.currentPiece = GameObject.Find("p3_Game_Piece_3");
-            GameManager.currentPlayer = 3;
-            GameManager.currentSquare = curSquare;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
 
-            //call checkmovement
-
-            while (!buttonClicked) // wait for button to be pressed
+            if (Physics.Raycast(ray, out hit))
             {
+                if (hit.transform.name == "p3_Game_Piece_3" && PieceManager3.player3Active)
+                {
+                    bool buttonClicked = false;
+                    GameManager.currentPiece = GameObject.Find("p3_Game_Piece_3");
+                    GameManager.currentPlayer = 3;
+                    GameManager.currentSquare = curSquare;
 
+                    //call checkmovement
+
+                    while (!buttonClicked) // wait for button to be pressed
+                    {
+
+                    }
+                    curSquare = GameManager.currentSquare;
+                    PieceManager3.player3Active = false;
+                }
             }
-            curSquare = GameManager.currentSquare;
-            p3p3Active = false;
         }
     }
 }

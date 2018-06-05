@@ -763,7 +763,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSquare: 70
-  p2p2Active: 1
 --- !u!1001 &128121313
 Prefab:
   m_ObjectHideFlags: 0
@@ -1203,7 +1202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSquare: 70
-  p1p4Active: 1
+  p1p4Active: 0
 --- !u!1 &217067160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,7 +1678,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSquare: 70
-  p4p3Active: 1
 --- !u!1 &312815290
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,7 +2234,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSquare: 70
-  p4p2Active: 1
 --- !u!1 &505595600
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,7 +2449,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSquare: 70
-  p3p1Active: 1
 --- !u!1 &527234230
 GameObject:
   m_ObjectHideFlags: 0
@@ -4882,7 +4878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSquare: 70
-  p1p3Active: 1
+  p1p3Active: 0
 --- !u!1 &1039070472
 GameObject:
   m_ObjectHideFlags: 0
@@ -5176,19 +5172,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15.8497925, y: 25.258543, z: 15.8497925}
   m_Center: {x: 0, y: 12.129272, z: 0}
---- !u!114 &1119773206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1119773202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2570706124a918445863c753490cf306, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curSquare: 70
-  p1p1Active: 1
 --- !u!1 &1135953011
 GameObject:
   m_ObjectHideFlags: 0
@@ -5987,7 +5970,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSquare: 70
-  p3p2Active: 1
 --- !u!1001 &1301765181
 Prefab:
   m_ObjectHideFlags: 0
@@ -6105,7 +6087,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSquare: 70
-  p4p4Active: 1
 --- !u!1 &1362386359
 GameObject:
   m_ObjectHideFlags: 0
@@ -6326,7 +6307,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSquare: 70
-  p2p1Active: 1
 --- !u!1 &1380115995
 GameObject:
   m_ObjectHideFlags: 0
@@ -6510,7 +6490,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSquare: 70
-  p3p4Active: 1
 --- !u!1 &1424764586
 GameObject:
   m_ObjectHideFlags: 0
@@ -6712,7 +6691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSquare: 70
-  p1p2Active: 1
+  p1p2Active: 0
 --- !u!1 &1467216874
 GameObject:
   m_ObjectHideFlags: 0
@@ -7123,7 +7102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSquare: 70
-  p2p4Active: 1
 --- !u!1 &1569792867
 GameObject:
   m_ObjectHideFlags: 0
@@ -7730,7 +7708,7 @@ BoxCollider:
   m_GameObject: {fileID: 1695811905}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 9.999999, y: 0.1, z: 9.999999}
   m_Center: {x: 0.0000035735093, y: 0.033308983, z: 0}
@@ -8387,7 +8365,7 @@ GameObject:
   - component: {fileID: 1780189219}
   m_Layer: 0
   m_Name: Card (15)
-  m_TagString: Untagged
+  m_TagString: Card15
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8400,7 +8378,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1780189217}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.78, y: 87.21, z: 4.1799994}
+  m_LocalPosition: {x: 18.78, y: 87.9, z: 4.1799994}
   m_LocalScale: {x: 0.40030998, y: 1, z: 0.57006997}
   m_Children: []
   m_Father: {fileID: 1692758031}
@@ -8417,8 +8395,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.999999, y: 0.1, z: 9.999999}
-  m_Center: {x: 0.0000035735093, y: 0.033308983, z: 0}
+  m_Size: {x: 9.999999, y: 1.2955072, z: 9.999999}
+  m_Center: {x: 0.0000035735093, y: 0.6310626, z: 0}
 --- !u!54 &1780189220
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9308,7 +9286,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSquare: 70
-  p4p1Active: 1
 --- !u!1 &2017319395
 GameObject:
   m_ObjectHideFlags: 0
@@ -9702,7 +9679,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSquare: 70
-  p2p3Active: 1
 --- !u!1 &2045472260
 GameObject:
   m_ObjectHideFlags: 0
@@ -9978,7 +9954,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSquare: 70
-  p3p3Active: 1
 --- !u!1001 &2117243402
 Prefab:
   m_ObjectHideFlags: 0
