@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+using UnityEngine.UI;
 public class CardDeck : MonoBehaviour {
     public const int SORRY = 13;
     public static List<int> orgDeck = new List<int>()

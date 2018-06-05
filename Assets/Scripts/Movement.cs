@@ -30,13 +30,16 @@ public class Movement : MonoBehaviour {
         if(card == 1 || card == 2)
         {
             GameObject startButton = GameObject.Find("Move From Start");
-            //make button visible
+            startButton.GetComponent<Text>().text = "Move From Start";
+            Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
+            startButton.GetComponent<Image>().sprite = UISprite;
 
             //if(!piece.squareType.Equals("start"))
             //  startButton.GetComponent<Button>().interactable = false;
             //else
             //  startButton.GetComponent<Button>().interactable = true;
             //  anyMovement = true;
+            //RedPiece1.curSquare = 0;
         }
         #endregion
 
