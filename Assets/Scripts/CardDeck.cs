@@ -11,7 +11,7 @@ public class CardDeck : MonoBehaviour {
             { 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 7, 7, 7, 7, 8, 8, 8, 8, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, SORRY, SORRY, SORRY, SORRY };
     public List<int> curDeck = new List<int>()
             { 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 7, 7, 7, 7, 8, 8, 8, 8, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, SORRY, SORRY, SORRY, SORRY };
-    public int card;
+    public static int card;
     public Material[] materialsArray = new Material[11];
     public static int cardCount = 0;
 
@@ -28,12 +28,12 @@ public class CardDeck : MonoBehaviour {
             {                
                 if (hit.transform.name == "Card (15)" && cardCount == 0)
                     {
-                    Debug.Log("Hit the card");
                     cardCount = 1;
                     GameObject.FindGameObjectWithTag("MainCamera").transform.Translate(3, 0, 15);
                     card = drawCard();
                     updateCard(card);
                     Invoke("zoomOut", 3.5f);
+                    PieceManager1.player1Active = true; //SET WHICH EVER PLAYER'S TURN IT IS TO ACTIVE
                 }
             }
         }
