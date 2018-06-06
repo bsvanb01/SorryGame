@@ -15,7 +15,7 @@ public class CardDeck : MonoBehaviour {
     public Material[] materialsArray = new Material[11];
     public static int cardCount = 0;
 
-    // random comment
+    
 
     public void Update()
     {
