@@ -9,7 +9,8 @@ public class CardDeck : MonoBehaviour {
     public const int SORRY = 13;
     public static List<int> orgDeck = new List<int>()
             { 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 7, 7, 7, 7, 8, 8, 8, 8, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, SORRY, SORRY, SORRY, SORRY };
-    public List<int> curDeck = orgDeck;
+    public List<int> curDeck = new List<int>()
+            { 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 7, 7, 7, 7, 8, 8, 8, 8, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, SORRY, SORRY, SORRY, SORRY };
     public int card;
     public Material[] materialsArray = new Material[11];
     public static int cardCount = 0;
