@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour {
     }
 
 
-    public bool checkMovement(int card, int player)
+    public bool checkMovement(int card, int player, int curSquare, int startSquare)
     {
         bool anyMovement = false;
         Renderer piece = GetComponent<Renderer>();
@@ -34,12 +34,13 @@ public class Movement : MonoBehaviour {
             Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
             startButton.GetComponent<Image>().sprite = UISprite;
 
-            //if(!piece.squareType.Equals("start"))
-            //  startButton.GetComponent<Button>().interactable = false;
-            //else
-            //  startButton.GetComponent<Button>().interactable = true;
-            //  anyMovement = true;
-            //RedPiece1.curSquare = 0;
+            if (!(piece.tag == "Start"))
+            {
+                startButton.GetComponent<Button>().interactable = false;
+            }
+            else
+              startButton.GetComponent<Button>().interactable = true;
+              anyMovement = true;
         }
         #endregion
 
@@ -47,30 +48,32 @@ public class Movement : MonoBehaviour {
         if (card == 1 || card == 2 || card == 3 || card == 5 || card == 7 || card == 8 || card == 10 || card == 11 || card == 12)
         {
             GameObject forButton = GameObject.Find("Move Forward");
-            //make button visible
+            forButton.GetComponent<Text>().text = "Move Forward";
+            Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
+            forButton.GetComponent<Image>().sprite = UISprite;
 
-            //if(piece.squareType == normal && piece.curSquare > (player.startSquare + 50) % 60 && piece.curSquare < (player.startSquare + 60) % 60)
-            //{
-            //    if(piece.curSquare + card > player.startSquare + 65)
-            //    {
-            //        forButton.GetComponent<Button>().interactable = false;
-            //    }
-            //    else
-            //    {
+            if(piece.tag == "Normal" && curSquare > (startSquare + 46) % 60 && curSquare < (startSquare + 58) % 60)
+            {
+                if(curSquare + card > startSquare + 64) // won't fit in the home spaces
+                {
+                    forButton.GetComponent<Button>().interactable = false;
+                }
+                else
+                {
+                    forButton.GetComponent<Button>().interactable = true;
+                    anyMovement = true;
+                }
+            }
+            else if (piece.tag == "Safe")
+            {
+                if(curSquare + card > 5)
+                    forButton.GetComponent<Button>().interactable = false;
+                else
+                {
             //        forButton.GetComponent<Button>().interactable = true;
             //        anyMovement = true;
-            //    }
-            //}
-            //else if (piece.squareType == "safe")
-            //{
-            //    if(piece.curSquare + card > 5)
-            //        forButton.GetComponent<Button>().interactable = false;
-            //    else
-            //    {
-            //        forButton.GetComponent<Button>().interactable = true;
-            //        anyMovement = true;
-            //    }
-            //}
+                }
+            }
             //else if (piece.squareType == "home")
             //{
             //    forButton.GetComponent<Button>().interactable = false;
