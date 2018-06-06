@@ -24,7 +24,7 @@ public class Movement : MonoBehaviour
     }
 
 
-    public bool checkMovement(int card, int player, int curSquare, int startSquare)
+    public bool checkMovement(int card, int curSquare, int startSquare)
     {
         bool anyMovement = false;
         Renderer piece = GetComponent<Renderer>();
@@ -33,7 +33,7 @@ public class Movement : MonoBehaviour
         if (card == 1 || card == 2)
         {
             GameObject startButton = GameObject.Find("Move From Start");
-            startButton.GetComponent<Text>().text = "Move From Start";
+            startButton.GetComponentInChildren<Text>().text = "Move From Start";
             Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
             startButton.GetComponent<Image>().sprite = UISprite;
 
@@ -51,7 +51,7 @@ public class Movement : MonoBehaviour
         if (card == 1 || card == 2 || card == 3 || card == 5 || card == 7 || card == 8 || card == 10 || card == 11 || card == 12)
         {
             GameObject forButton = GameObject.Find("Move Forward");
-            forButton.GetComponent<Text>().text = "Move Forward";
+            forButton.GetComponentInChildren<Text>().text = "Move Forward";
             Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
             forButton.GetComponent<Image>().sprite = UISprite;
 
@@ -69,8 +69,7 @@ public class Movement : MonoBehaviour
             }
             else if (piece.tag == "Safe")
             {
-                //THIS IS WRONG, DEPENDS ON HOW THE SAFETY SQUARES ARE NAMED
-                if (curSquare + card > 5)
+                if ((curSquare % 6) + card > 5)
                     forButton.GetComponent<Button>().interactable = false;
                 else
                 {
@@ -94,24 +93,48 @@ public class Movement : MonoBehaviour
         if (card == 4 || card == 10)
         {
             GameObject backButton = GameObject.Find("Move Backward");
-            backButton.GetComponent<Text>().text = "Move Backward";
+            backButton.GetComponentInChildren<Text>().text = "Move Backward";
             Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
             backButton.GetComponent<Image>().sprite = UISprite;
-            backButton.GetComponent<Button>().interactable = true;
-            anyMovement = true;
+
+            if (piece.tag == "Normal" || piece.tag == "Safe")
+            {
+                backButton.GetComponent<Button>().interactable = true;
+                anyMovement = true;
+            }
+            else
+                backButton.GetComponent<Button>().interactable = false;
         }
         #endregion
 
         #region swap sorry
         if (card == 13)
         {
-            //if(piece.tag != "Start")
-            //{
+            if (piece.tag != "Start")
+            {
 
-            //}
-            //else if (all other players pieces are not in normal spaces
-            //else
-            //anyMovement = true;
+            }
+            //all other players are not on normal squares
+            //change this for each player
+            else if (GameObject.Find("p2_Game_Piece_1").tag != "Normal" &&
+                 GameObject.Find("p2_Game_Piece_2").tag != "Normal" &&
+                 GameObject.Find("p2_Game_Piece_3").tag != "Normal" &&
+                 GameObject.Find("p2_Game_Piece_4").tag != "Normal" &&
+                 GameObject.Find("p3_Game_Piece_1").tag != "Normal" &&
+                 GameObject.Find("p3_Game_Piece_2").tag != "Normal" &&
+                 GameObject.Find("p3_Game_Piece_3").tag != "Normal" &&
+                 GameObject.Find("p3_Game_Piece_4").tag != "Normal" &&
+                 GameObject.Find("p4_Game_Piece_1").tag != "Normal" &&
+                 GameObject.Find("p4_Game_Piece_2").tag != "Normal" &&
+                 GameObject.Find("p4_Game_Piece_3").tag != "Normal" &&
+                 GameObject.Find("p4_Game_Piece_4").tag != "Normal")
+            {
+
+            }
+            else
+            {
+                anyMovement = true;
+            }
         }
         #endregion
 
@@ -119,15 +142,36 @@ public class Movement : MonoBehaviour
         if (card == 11)
         {
             GameObject swapButton = GameObject.Find("Swap");
-            //make button visible
+            swapButton.GetComponentInChildren<Text>().text = "Swap";
+            Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
+            swapButton.GetComponent<Image>().sprite = UISprite;
 
-            //if(piece.squareType!=normal)
-            //swapButton.GetComponent<Button>().interactable = false;
-            //else if(All other players pieces aren't normal)
-            //swapButton.GetComponent<Button>().interactable = false;
-            //else
-            //anyMovement = true;
-            //swapButton.GetComponent<Button>().interactable = true;
+            if (piece.tag != "Normal")
+            {
+                swapButton.GetComponent<Button>().interactable = false;
+            }
+            //all other players are not on normal squares
+            //change this for each player
+            else if (GameObject.Find("p2_Game_Piece_1").tag != "Normal" &&
+                 GameObject.Find("p2_Game_Piece_2").tag != "Normal" &&
+                 GameObject.Find("p2_Game_Piece_3").tag != "Normal" &&
+                 GameObject.Find("p2_Game_Piece_4").tag != "Normal" &&
+                 GameObject.Find("p3_Game_Piece_1").tag != "Normal" &&
+                 GameObject.Find("p3_Game_Piece_2").tag != "Normal" &&
+                 GameObject.Find("p3_Game_Piece_3").tag != "Normal" &&
+                 GameObject.Find("p3_Game_Piece_4").tag != "Normal" &&
+                 GameObject.Find("p4_Game_Piece_1").tag != "Normal" &&
+                 GameObject.Find("p4_Game_Piece_2").tag != "Normal" &&
+                 GameObject.Find("p4_Game_Piece_3").tag != "Normal" &&
+                 GameObject.Find("p4_Game_Piece_4").tag != "Normal")
+            {
+                swapButton.GetComponent<Button>().interactable = false;
+            }
+            else
+            {
+                anyMovement = true;
+                swapButton.GetComponent<Button>().interactable = true;
+            }
         }
         #endregion
         return anyMovement;
