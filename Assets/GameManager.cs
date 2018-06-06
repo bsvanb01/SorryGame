@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour {
     public static int currentPlayer;
     public static int currentSquare;
 
+    public GameObject[] spaces = new GameObject[84];
+
     void Start () {
 
 	}

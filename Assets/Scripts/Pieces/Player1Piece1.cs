@@ -34,7 +34,7 @@ public class Player1Piece1 : MonoBehaviour {
                     //{
 
                     //}
-                    curSquare = GameManager.currentSquare;
+                    //curSquare = GameManager.currentSquare;
                     //PieceManager1.player1Active = false;
                 }
             }
