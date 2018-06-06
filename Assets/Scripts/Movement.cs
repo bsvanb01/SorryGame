@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Movement : MonoBehaviour {
+public class Movement : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     public void move(int cardNum)
     {
@@ -27,7 +30,7 @@ public class Movement : MonoBehaviour {
         Renderer piece = GetComponent<Renderer>();
 
         #region move from start
-        if(card == 1 || card == 2)
+        if (card == 1 || card == 2)
         {
             GameObject startButton = GameObject.Find("Move From Start");
             startButton.GetComponent<Text>().text = "Move From Start";
@@ -39,8 +42,8 @@ public class Movement : MonoBehaviour {
                 startButton.GetComponent<Button>().interactable = false;
             }
             else
-              startButton.GetComponent<Button>().interactable = true;
-              anyMovement = true;
+                startButton.GetComponent<Button>().interactable = true;
+            anyMovement = true;
         }
         #endregion
 
@@ -52,9 +55,9 @@ public class Movement : MonoBehaviour {
             Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
             forButton.GetComponent<Image>().sprite = UISprite;
 
-            if(piece.tag == "Normal" && curSquare > (startSquare + 46) % 60 && curSquare < (startSquare + 58) % 60)
+            if (piece.tag == "Normal" && curSquare > (startSquare + 46) % 60 && curSquare < (startSquare + 58) % 60)
             {
-                if(curSquare + card > startSquare + 64) // won't fit in the home spaces
+                if (curSquare + card > startSquare + 64) // won't fit in the home spaces
                 {
                     forButton.GetComponent<Button>().interactable = false;
                 }
@@ -66,43 +69,49 @@ public class Movement : MonoBehaviour {
             }
             else if (piece.tag == "Safe")
             {
-                if(curSquare + card > 5)
+                //THIS IS WRONG, DEPENDS ON HOW THE SAFETY SQUARES ARE NAMED
+                if (curSquare + card > 5)
                     forButton.GetComponent<Button>().interactable = false;
                 else
                 {
-            //        forButton.GetComponent<Button>().interactable = true;
-            //        anyMovement = true;
+                    forButton.GetComponent<Button>().interactable = true;
+                    anyMovement = true;
                 }
             }
-            //else if (piece.squareType == "home")
-            //{
-            //    forButton.GetComponent<Button>().interactable = false;
-            //}
-            //else
-            //{
-            //    forButton.GetComponent<Button>().interactable = true;
-            //    anyMovement = true;
-            //}
+            else if (piece.tag == "Home")
+            {
+                forButton.GetComponent<Button>().interactable = false;
+            }
+            else
+            {
+                forButton.GetComponent<Button>().interactable = true;
+                anyMovement = true;
+            }
         }
         #endregion
 
         #region move backward
-        if(card == 4 || card == 10)
+        if (card == 4 || card == 10)
         {
             GameObject backButton = GameObject.Find("Move Backward");
-            //make button visible
+            backButton.GetComponent<Text>().text = "Move Backward";
+            Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
+            backButton.GetComponent<Image>().sprite = UISprite;
             backButton.GetComponent<Button>().interactable = true;
             anyMovement = true;
         }
         #endregion
 
         #region swap sorry
-        if(card == 13)
+        if (card == 13)
         {
-            //if(piece.squareType != "start")
+            //if(piece.tag != "Start")
+            //{
+
+            //}
             //else if (all other players pieces are not in normal spaces
             //else
-                    //anyMovement = true;
+            //anyMovement = true;
         }
         #endregion
 
@@ -114,7 +123,7 @@ public class Movement : MonoBehaviour {
 
             //if(piece.squareType!=normal)
             //swapButton.GetComponent<Button>().interactable = false;
-            //else if(FindObjectsOfTypeAll other players pieces aren't normal)
+            //else if(All other players pieces aren't normal)
             //swapButton.GetComponent<Button>().interactable = false;
             //else
             //anyMovement = true;
