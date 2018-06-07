@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Player1Piece1 : MonoBehaviour {
 
-    public static int curSquare = 0;
+    public static int curSquare = 4;
 
     void Start()
     {
@@ -21,8 +21,9 @@ public class Player1Piece1 : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.transform.name == "p1_Game_Piece_1" && PieceManager1.player1Active)
+                if (hit.transform.name == "p1_Game_Piece_1" && PieceManager1.player1Active == true)
                 {
+                    Debug.Log("Cur square is : " + curSquare);
                     GameManager.currentPiece = GameObject.Find("p1_Game_Piece_1");
                     GameManager.currentPlayer = 1;
                     GameManager.currentSquare = curSquare;

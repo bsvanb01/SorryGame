@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Player3Piece2 : MonoBehaviour
 {
 
-    public static int curSquare = 70;
+    public static int curSquare = 34;
 
     void Start()
     {

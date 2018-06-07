@@ -35,7 +35,6 @@ public class CardDeck : MonoBehaviour {
                     playerLabel = GameObject.Find("PlayerLabel");
                     playerLabel.GetComponent<Text>().text = "";
                     card = drawCard();
-                    card = 3;
                     updateCard(card);
                     Invoke("zoomOut", 3.5f);
                 }

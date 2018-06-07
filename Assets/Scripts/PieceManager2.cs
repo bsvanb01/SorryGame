@@ -10,6 +10,8 @@ public class PieceManager2 : MonoBehaviour {
     [SerializeField] private GameObject p2Piece4;
     public static bool player2Active = false;
     public static int startSquare = 19;
+    public static int piecesHome = 0;
+
 
     // Use this for initialization
     void Start () {
