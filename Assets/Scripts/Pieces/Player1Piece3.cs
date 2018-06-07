@@ -24,27 +24,19 @@ public class Player1Piece3 : MonoBehaviour
             {
                 if (hit.transform.name == "p1_Game_Piece_3" && PieceManager1.player1Active)
                 {
-                    bool buttonClicked = false;
                     GameManager.currentPiece = GameObject.Find("p1_Game_Piece_3");
                     GameManager.currentPlayer = 1;
                     GameManager.currentSquare = curSquare;
                     curSquare = 58;
-                    bool anyMovement = checkMovement(CardDeck.card, curSquare, PieceManager1.startSquare);
-                    //while (!buttonClicked) // wait for button to be pressed
-                    //{
-
-                    //}
-                    curSquare = GameManager.currentSquare;
-                    //PieceManager1.player1Active = false;
+                    bool anyMovement = checkMovement(CardDeck.card, curSquare, PieceManager1.startSquare, GetComponent<Renderer>());
                 }
             }
         }
     }
 
-    public bool checkMovement(int card, int curSquare, int startSquare)
+    public bool checkMovement(int card, int curSquare, int startSquare, Renderer piece)
     {
         bool anyMovement = false;
-        Renderer piece = GetComponent<Renderer>();
 
         #region move from start
         if (card == 1 || card == 2)

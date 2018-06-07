@@ -23,19 +23,11 @@ public class Player4Piece1 : MonoBehaviour
             {
                 if (hit.transform.name == "p4_Game_Piece_1" && PieceManager4.player4Active)
                 {
-                    bool buttonClicked = false;
                     GameManager.currentPiece = GameObject.Find("p4_Game_Piece_1");
                     GameManager.currentPlayer = 4;
                     GameManager.currentSquare = curSquare;
 
                     //call checkmovement
-
-                    while (!buttonClicked) // wait for button to be pressed
-                    {
-
-                    }
-                    curSquare = GameManager.currentSquare;
-                    PieceManager4.player4Active = false;
                 }
             }
         }

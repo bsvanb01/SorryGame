@@ -23,19 +23,11 @@ public class Player3Piece2 : MonoBehaviour
             {
                 if (hit.transform.name == "p3_Game_Piece_2" && PieceManager3.player3Active)
                 {
-                    bool buttonClicked = false;
                     GameManager.currentPiece = GameObject.Find("p3_Game_Piece_2");
                     GameManager.currentPlayer = 3;
                     GameManager.currentSquare = curSquare;
 
                     //call checkmovement
-
-                    while (!buttonClicked) // wait for button to be pressed
-                    {
-
-                    }
-                    curSquare = GameManager.currentSquare;
-                    PieceManager3.player3Active = false;
                 }
             }
         }
