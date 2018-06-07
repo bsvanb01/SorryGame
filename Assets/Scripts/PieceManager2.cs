@@ -10,6 +10,22 @@ public class PieceManager2 : MonoBehaviour {
     [SerializeField] private GameObject p2Piece4;
     public static bool player2Active = false;
 
+    GameObject go = null;
+
+    public void activate()
+    {
+        go = GameObject.Find("Player 2 Pieces");
+        go.SetActive(true);
+
+    }
+
+    public void deactivate()
+    {
+        go = GameObject.Find("Player 2 Pieces");
+        go.SetActive(false);
+    }
+
+
     // Use this for initialization
     void Start () {
 		

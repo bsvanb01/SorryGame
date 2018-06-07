@@ -11,9 +11,28 @@ public class PieceManager4 : MonoBehaviour {
     [SerializeField] private GameObject p4Piece4;
     public static bool player4Active = false;
 
-    public float movespeed;
-    private Vector3 Direction;
-    
+    // public float movespeed;
+    //private Vector3 Direction;
+
+
+    GameObject go = null;
+
+    public void activate()
+    {
+        go = GameObject.Find("Player 3 Pieces");
+        go.SetActive(true);
+
+    }
+
+    public void deactivate()
+    {
+        go = GameObject.Find("Player 3 Pieces");
+        go.SetActive(false);
+    }
+
+
+
+
     // Use this for initialization
     void Start () {
         //Direction = Vector3.left;

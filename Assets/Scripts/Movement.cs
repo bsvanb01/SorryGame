@@ -118,7 +118,7 @@ public class Movement : MonoBehaviour
         #region swap 11
         if (card == 11)
         {
-            GameObject swapButton = GameObject.Find("Swap");
+            //GameObject swapButton = GameObject.Find("Swap");
             //make button visible
 
             //if(piece.squareType!=normal)

@@ -15,10 +15,22 @@ public class CardDeck : MonoBehaviour {
     public Material[] materialsArray = new Material[11];
     public static int cardCount = 0;
 
-    // random comment
+    GameManager GM = new GameManager();
+    
+    
+    //SceneController TXT = new SceneController();
 
-    public void Update()
+    void Update()
     {
+        //if((pm1 == null) && (GetComponent<PieceManager1>() != null))
+        //{
+        //     pm1 = GetComponent<PieceManager1>();
+        //}
+        //else
+        //{
+        //    Debug.Log("Missing script");
+        //}
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -28,16 +40,27 @@ public class CardDeck : MonoBehaviour {
             {                
                 if (hit.transform.name == "Card (15)" && cardCount == 0)
                     {
-                    Debug.Log("Hit the card");
-                    cardCount = 1;
+                    //TXT.CheckMatch();
+                    cardCount = 0;
                     GameObject.FindGameObjectWithTag("MainCamera").transform.Translate(3, 0, 15);
                     card = drawCard();
                     updateCard(card);
                     Invoke("zoomOut", 3.5f);
+                    GM.PlayerChange();
+                    GameManager.currentPlayer++;
+
                 }
             }
         }
+
+
     }
+
+
+
+
+
+
 
     public void zoomOut()
     {

@@ -75,6 +75,8 @@
      <Compile Include="Assets\Scripts\Pieces\Player4Piece3.cs" />
      <Compile Include="Assets\Scripts\Pieces\Player4Piece4.cs" />
      <Compile Include="Assets\Scripts\StartUI.cs" />
+     <Compile Include="Assets\Scripts\TurnTextController.cs" />
+     <Compile Include="Assets\Scripts\UIButton.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
