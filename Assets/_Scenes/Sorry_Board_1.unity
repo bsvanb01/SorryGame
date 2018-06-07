@@ -8725,7 +8725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2570706124a918445863c753490cf306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curSquare: 0
+  curSquare: 58
 --- !u!23 &1119773207
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9596,7 +9596,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_TagString
-      value: Start
+      value: Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}

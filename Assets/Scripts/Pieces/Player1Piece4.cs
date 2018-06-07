@@ -24,27 +24,19 @@ public class Player1Piece4 : MonoBehaviour
             {
                 if (hit.transform.name == "p1_Game_Piece_4" && PieceManager1.player1Active)
                 {
-                    bool buttonClicked = false;
                     GameManager.currentPiece = GameObject.Find("p1_Game_Piece_4");
                     GameManager.currentPlayer = 1;
                     GameManager.currentSquare = curSquare;
 
-                    bool anyMovement = checkMovement(CardDeck.card, curSquare, PieceManager1.startSquare);
-                    //while (!buttonClicked) // wait for button to be pressed
-                    //{
-
-                    //}
-                    curSquare = GameManager.currentSquare;
-                    //PieceManager1.player1Active = false;
+                    bool anyMovement = checkMovement(CardDeck.card, curSquare, PieceManager1.startSquare, GetComponent<Renderer>());
                 }
             }
         }
     }
 
-    public bool checkMovement(int card, int curSquare, int startSquare)
+    public bool checkMovement(int card, int curSquare, int startSquare, Renderer piece)
     {
         bool anyMovement = false;
-        Renderer piece = GetComponent<Renderer>();
 
         #region move from start
         if (card == 1 || card == 2)
@@ -72,7 +64,7 @@ public class Player1Piece4 : MonoBehaviour
             Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
             forButton.GetComponent<Image>().sprite = UISprite;
 
-            if (piece.tag == "Normal" && curSquare > (startSquare + 46) % 60 && curSquare < (startSquare + 58) % 60)
+            if (piece.tag == "Normal" && curSquare > (startSquare + 46) && curSquare < (startSquare + 58))
             {
                 if (curSquare + card > startSquare + 64) // won't fit in the home spaces
                 {
