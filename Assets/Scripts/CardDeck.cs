@@ -16,6 +16,8 @@ public class CardDeck : MonoBehaviour {
     public static int cardCount = 0;
 
     GameManager GM = new GameManager();
+    public GameObject playerLabel;
+
 
     public void Update()
     {
@@ -28,14 +30,14 @@ public class CardDeck : MonoBehaviour {
             {                
                 if (hit.transform.name == "Card (15)" && cardCount == 0)
                 {
-                    //cardCount = 1;
+                    cardCount = 1;
                     GameObject.FindGameObjectWithTag("MainCamera").transform.Translate(3, 0, 15);
+                    playerLabel = GameObject.Find("PlayerLabel");
+                    playerLabel.GetComponent<Text>().text = "";
                     card = drawCard();
+                    card = 3;
                     updateCard(card);
                     Invoke("zoomOut", 3.5f);
-
-                    GM.PlayerChange();
-                    GameManager.currentPlayer++;
                 }
             }
         }
@@ -44,14 +46,17 @@ public class CardDeck : MonoBehaviour {
     public void zoomOut()
     {
         GameObject.FindGameObjectWithTag("MainCamera").transform.Translate(-3, 0, -15);
+        int curPlayer = (GameManager.currentPlayer + 1) % 4;
+        if (curPlayer == 0)
+            curPlayer = 1;
+        playerLabel.GetComponent<Text>().text = "Player " + curPlayer;
+        Invoke("playerChange", .5f);
     }
 
-    public void zoomIn()
+    public void playerChange()
     {
-        Camera.main.orthographic = true;
-        
-        Camera.main.orthographic = false;
-
+        GM.PlayerChange();
+        GameManager.currentPlayer++;
     }
 
     public int drawCard()
