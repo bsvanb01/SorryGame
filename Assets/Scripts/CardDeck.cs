@@ -15,7 +15,7 @@ public class CardDeck : MonoBehaviour {
     public Material[] materialsArray = new Material[11];
     public static int cardCount = 0;
 
-    
+    GameManager GM = new GameManager();
 
     public void Update()
     {
@@ -27,13 +27,15 @@ public class CardDeck : MonoBehaviour {
             if (Physics.Raycast(ray, out hit))
             {                
                 if (hit.transform.name == "Card (15)" && cardCount == 0)
-                    {
-                    cardCount = 1;
+                {
+                    //cardCount = 1;
                     GameObject.FindGameObjectWithTag("MainCamera").transform.Translate(3, 0, 15);
                     card = drawCard();
                     updateCard(card);
                     Invoke("zoomOut", 3.5f);
-                    PieceManager1.player1Active = true; //SET WHICH EVER PLAYER'S TURN IT IS TO ACTIVE
+
+                    GM.PlayerChange();
+                    GameManager.currentPlayer++;
                 }
             }
         }
