@@ -11,6 +11,8 @@ public class PieceManager4 : MonoBehaviour {
     [SerializeField] private GameObject p4Piece4;
     public static bool player4Active = false;
     public static int startSquare = 49;
+    public static int piecesHome = 0;
+
 
     public float movespeed;
     private Vector3 Direction;

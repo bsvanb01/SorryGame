@@ -30,8 +30,6 @@ public class GameManager : MonoBehaviour
 
         if (currentPlayer == 0)             //Player 1 turn
         {
-            Debug.Log("Player 1 turn");
-
             bool piece1 = checkMovement(CardDeck.card, Player1Piece1.curSquare, PieceManager1.startSquare, GameObject.Find("p1_Game_Piece_1"), 1);
             bool piece2 = checkMovement(CardDeck.card, Player1Piece2.curSquare, PieceManager1.startSquare, GameObject.Find("p1_Game_Piece_2"), 1);
             bool piece3 = checkMovement(CardDeck.card, Player1Piece3.curSquare, PieceManager1.startSquare, GameObject.Find("p1_Game_Piece_3"), 1);
@@ -47,16 +45,11 @@ public class GameManager : MonoBehaviour
             else
             {
                 PieceManager1.player1Active = true;
-                PieceManager2.player2Active = false;
-                PieceManager3.player3Active = false;
-                PieceManager4.player4Active = false;
             }
         }
 
         else if (currentPlayer == 1)        //Player 2 turn
         {
-            Debug.Log("Player 2 turn");
-
             bool piece1 = checkMovement(CardDeck.card, Player2Piece1.curSquare, PieceManager2.startSquare, GameObject.Find("p2_Game_Piece_1"), 2);
             bool piece2 = checkMovement(CardDeck.card, Player2Piece2.curSquare, PieceManager2.startSquare, GameObject.Find("p2_Game_Piece_2"), 2);
             bool piece3 = checkMovement(CardDeck.card, Player2Piece3.curSquare, PieceManager2.startSquare, GameObject.Find("p2_Game_Piece_3"), 2);
@@ -71,17 +64,12 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                PieceManager1.player1Active = false;
                 PieceManager2.player2Active = true;
-                PieceManager3.player3Active = false;
-                PieceManager4.player4Active = false;
             }
         }
 
         else if (currentPlayer == 2)         //Player 3 turn
         {
-            Debug.Log("Player 3 turn");
-
             bool piece1 = checkMovement(CardDeck.card, Player3Piece1.curSquare, PieceManager3.startSquare, GameObject.Find("p3_Game_Piece_1"), 3);
             bool piece2 = checkMovement(CardDeck.card, Player3Piece2.curSquare, PieceManager3.startSquare, GameObject.Find("p3_Game_Piece_2"), 3);
             bool piece3 = checkMovement(CardDeck.card, Player3Piece3.curSquare, PieceManager3.startSquare, GameObject.Find("p3_Game_Piece_3"), 3);
@@ -96,19 +84,13 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                PieceManager1.player1Active = false;
-                PieceManager2.player2Active = false;
                 PieceManager3.player3Active = true;
-                PieceManager4.player4Active = false;
             }
 
         }
 
         else if (currentPlayer == 3)           //Player 4 turn
         {
-            Debug.Log("Player 4 turn");
-            
-
             bool piece1 = checkMovement(CardDeck.card, Player4Piece1.curSquare, PieceManager4.startSquare, GameObject.Find("p4_Game_Piece_1"), 4);
             bool piece2 = checkMovement(CardDeck.card, Player4Piece2.curSquare, PieceManager4.startSquare, GameObject.Find("p4_Game_Piece_2"), 4);
             bool piece3 = checkMovement(CardDeck.card, Player4Piece3.curSquare, PieceManager4.startSquare, GameObject.Find("p4_Game_Piece_3"), 4);
@@ -123,9 +105,6 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                PieceManager1.player1Active = false;
-                PieceManager2.player2Active = false;
-                PieceManager3.player3Active = false;
                 PieceManager4.player4Active = true;
             }
         }
@@ -350,5 +329,10 @@ public class GameManager : MonoBehaviour
         }
         #endregion
         return anyMovement;
+    }
+
+    public void endGame()
+    {
+        EditorUtility.DisplayDialog("You Win!", "You won!", "OK");
     }
 }

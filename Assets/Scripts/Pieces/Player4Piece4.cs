@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Player4Piece4 : MonoBehaviour
 {
-    public static int curSquare = 70;
+    public static int curSquare = 49;
 
     void Start()
     {
