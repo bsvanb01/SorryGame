@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Player2Piece1 : MonoBehaviour
 {
 
-    public static int curSquare = 19;
+    public static int curSquare = 12;
 
     void Start()
     {
@@ -41,7 +41,8 @@ public class Player2Piece1 : MonoBehaviour
         #region move from start
         if (card == 1 || card == 2)
         {
-            GameObject startButton = GameObject.Find("Move From Start");
+            GameObject startButton = GameManager.startButton;
+            startButton.SetActive(true);
             startButton.GetComponentInChildren<Text>().text = "Move From Start";
             Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
             startButton.GetComponent<Image>().sprite = UISprite;
@@ -59,14 +60,15 @@ public class Player2Piece1 : MonoBehaviour
         #region move forward
         if (card == 1 || card == 2 || card == 3 || card == 5 || card == 7 || card == 8 || card == 10 || card == 11 || card == 12)
         {
-            GameObject forButton = GameObject.Find("Move Forward");
+            GameObject forButton = GameManager.forButton;
+            forButton.SetActive(true);
             forButton.GetComponentInChildren<Text>().text = "Move Forward";
             Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
             forButton.GetComponent<Image>().sprite = UISprite;
 
-            if (piece.tag == "Normal" && curSquare > (startSquare + 46) && curSquare < (startSquare + 58))
+            if (piece.tag == "Normal" && curSquare > (startSquare + 46) % 60 && curSquare < (startSquare + 58))
             {
-                if (curSquare + card > startSquare + 64) // won't fit in the home spaces
+                if ((curSquare + card) % 60 > (startSquare + 64) % 60) // won't fit in the home spaces
                 {
                     forButton.GetComponent<Button>().interactable = false;
                 }
@@ -101,7 +103,8 @@ public class Player2Piece1 : MonoBehaviour
         #region move backward
         if (card == 4 || card == 10)
         {
-            GameObject backButton = GameObject.Find("Move Backward");
+            GameObject backButton = GameManager.backButton;
+            backButton.SetActive(true);
             backButton.GetComponentInChildren<Text>().text = "Move Backward";
             Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
             backButton.GetComponent<Image>().sprite = UISprite;
@@ -150,7 +153,8 @@ public class Player2Piece1 : MonoBehaviour
         #region swap 11
         if (card == 11)
         {
-            GameObject swapButton = GameObject.Find("Swap");
+            GameObject swapButton = GameManager.swapButton;
+            swapButton.SetActive(true);
             swapButton.GetComponentInChildren<Text>().text = "Swap";
             Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
             swapButton.GetComponent<Image>().sprite = UISprite;

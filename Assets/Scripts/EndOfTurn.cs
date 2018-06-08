@@ -23,31 +23,22 @@ public class EndOfTurn : MonoBehaviour {
 
         #region Clear Buttons
 
-        Sprite UIMask = Resources.Load<Sprite>("unity_builtin_extra");
-
-        GameObject forButton = GameObject.Find("Move Forward");
-        //forButton.GetComponentInChildren<Text>().text = "";
-        //forButton.GetComponent<Image>().sprite = UIMask;
-        //forButton.GetComponent<Button>().interactable = false;
-        forButton.SetActive(false);
-
-        GameObject startButton = GameObject.Find("Move From Start");
-        //startButton.GetComponentInChildren<Text>().text = "";
-        //startButton.GetComponent<Image>().sprite = UIMask;
-        //forButton.GetComponent<Button>().interactable = false;
-        startButton.SetActive(false);
+        GameManager.forButton.SetActive(false);
+        GameManager.startButton.SetActive(false);
+        GameManager.backButton.SetActive(false);
+        GameManager.swapButton.SetActive(false);
 
 
-        GameObject backButton = GameObject.Find("Move Backward");
-        backButton.GetComponentInChildren<Text>().text = "";
-        backButton.GetComponent<Image>().sprite = UIMask;
-        forButton.GetComponent<Button>().interactable = false;
+        //GameObject backButton = GameObject.Find("Move Backward");
+        //backButton.GetComponentInChildren<Text>().text = "";
+        //backButton.GetComponent<Image>().sprite = UIMask;
+        //backButton.GetComponent<Button>().interactable = false;
 
 
-        GameObject swapButton = GameObject.Find("Swap");
-        swapButton.GetComponentInChildren<Text>().text = "";
-        swapButton.GetComponent<Image>().sprite = UIMask;
-        forButton.GetComponent<Button>().interactable = false;
+        //GameObject swapButton = GameObject.Find("Swap");
+        //swapButton.GetComponentInChildren<Text>().text = "";
+        //swapButton.GetComponent<Image>().sprite = UIMask;
+        //swapButton.GetComponent<Button>().interactable = false;
 
 
 

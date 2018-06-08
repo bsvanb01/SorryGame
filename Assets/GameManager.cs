@@ -10,11 +10,26 @@ public class GameManager : MonoBehaviour
     public static GameObject currentPiece;
     public static int currentPlayer = 0;
     public static int currentSquare;
+    public static GameObject startButton;
+    public static GameObject forButton;
+    public static GameObject backButton;
+    public static GameObject swapButton;
 
     public GameObject[] spaces = new GameObject[84];
 
     void Start()
     {
+        startButton = GameObject.Find("Move From Start");
+        startButton.SetActive(false);
+
+        forButton = GameObject.Find("Move Forward");
+        forButton.SetActive(false);
+
+        backButton = GameObject.Find("Move Backward");
+        backButton.SetActive(false);
+
+        swapButton = GameObject.Find("Swap");
+        swapButton.SetActive(false);
 
     }
 
@@ -26,6 +41,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayerChange()
     {
+        
         currentPlayer = currentPlayer % 4;
 
         if (currentPlayer == 0)             //Player 1 turn
@@ -127,7 +143,7 @@ public class GameManager : MonoBehaviour
         {
             if (piece.tag == "Normal" && curSquare > (startSquare + 46) % 60 && curSquare < (startSquare + 58) % 60)
             {
-                if (curSquare + card <= startSquare + 64) // won't fit in the home spaces
+                if ((curSquare + card) % 60 <= (startSquare + 64) % 60) // won't fit in the home spaces
                     anyMovement = true;
             }
             else if (piece.tag == "Safe")
