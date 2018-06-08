@@ -14,7 +14,9 @@ public class MoveBackward : MonoBehaviour
     private static GameObject curPiece;
     public GameObject playerLabel;
     GameManager GM = new GameManager();
-
+    int slideSpaces;
+    int curSquare2;
+    GameObject curPiece2;
 
 
     void Start()
@@ -26,11 +28,11 @@ public class MoveBackward : MonoBehaviour
     {
 
         int moveNum = CardDeck.card;
-        int curSquare2 = GameManager.currentSquare;
+        curSquare2 = GameManager.currentSquare;
         int curPlayer2 = GameManager.currentPlayer;
-        GameObject curPiece2 = GameManager.currentPiece;
+        curPiece2 = GameManager.currentPiece;
         int spacesLeft = moveNum;
-        int slideSpaces = 0;
+        slideSpaces = 0;
         Debug.Log("set up variables");
 
         if (spacesLeft == 10)
@@ -114,6 +116,17 @@ public class MoveBackward : MonoBehaviour
                 slideSpaces += 4;
             }
         }
+        Invoke("slideSpace", 1.0f);
+        #endregion
+
+        GameManager.currentSquare = curSquare2; // update the gameManager version of currentSquare so that it now has curSquare2.
+                                                //that will be passed onto curSquare, which is updated every frame.
+
+        EndOfTurn.endOfTurn(curSquare2);
+    }
+
+    public void slideSpace()
+    {
         for (int Left = slideSpaces; Left > 0; Left--)
         {
             curSquare2 += 1;
@@ -123,12 +136,6 @@ public class MoveBackward : MonoBehaviour
 
             Debug.Log("spaces left:" + Left);
         }
-        #endregion
-
-        GameManager.currentSquare = curSquare2; // update the gameManager version of currentSquare so that it now has curSquare2.
-                                                //that will be passed onto curSquare, which is updated every frame.
-
-        EndOfTurn.endOfTurn(curSquare2);
     }
 
     // Update is called once per frame

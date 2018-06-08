@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Player3Piece1 : MonoBehaviour
 {
 
-    public static int curSquare = 18;
+    public static int curSquare = 35;
 
     void Start()
     {
@@ -68,7 +68,7 @@ public class Player3Piece1 : MonoBehaviour
             Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
             forButton.GetComponent<Image>().sprite = UISprite;
 
-            if (piece.tag == "Normal" && curSquare > (startSquare + 46) % 60 && curSquare < (startSquare + 58))
+            if (piece.tag == "Normal" && curSquare > (startSquare + 46) % 60 && curSquare < (startSquare + 58) % 60)
             {
                 if ((curSquare + card) % 60 > (startSquare + 64) % 60) // won't fit in the home spaces
                 {
