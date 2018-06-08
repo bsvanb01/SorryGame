@@ -1554,7 +1554,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_TagString
-      value: Start
+      value: Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
@@ -3487,6 +3487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676468c6aed73604982f3a0efa13f8f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slideSpaces: 0
 --- !u!114 &425164902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9849,7 +9850,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_TagString
-      value: Start
+      value: Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
@@ -14286,7 +14287,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_TagString
-      value: Start
+      value: Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}

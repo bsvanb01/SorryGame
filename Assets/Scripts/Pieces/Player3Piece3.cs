@@ -66,7 +66,7 @@ public class Player3Piece3 : MonoBehaviour
             Sprite UISprite = Resources.Load("unity_builtin_extra") as Sprite;
             forButton.GetComponent<Image>().sprite = UISprite;
 
-            if (piece.tag == "Normal" && curSquare > (startSquare + 46) && curSquare < (startSquare + 58))
+            if (piece.tag == "Normal" && curSquare > (startSquare + 46) && curSquare < (startSquare + 58) % 60)
             {
                 if ((curSquare + card) % 60 > (startSquare + 64) % 60) // won't fit in the home spaces
                 {

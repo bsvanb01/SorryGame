@@ -33,7 +33,6 @@ public class MoveFromStart : MonoBehaviour
             case 1:
                 curPiece2.transform.position = GameObject.FindGameObjectWithTag("4").transform.position;
                 curSquare2 = 4;
-                Debug.Log("it was player one");
                 break;
             case 2:
                 curPiece2.transform.position = GameObject.FindGameObjectWithTag("19").transform.position;
@@ -50,13 +49,13 @@ public class MoveFromStart : MonoBehaviour
         }
         spacesLeft -= 1;
 
-        if (spacesLeft == 1) // if you got a 2 card
-        {
-            curSquare2 += 1;
-            curSquare2 = curSquare2 % 60; // if the number is 60, that sets it back to 0. so the board loops its normal spaces
-                                          /* movement of the physical piece updating its physical position based on the new curSquare. */
-            curPiece2.transform.position = GameObject.FindGameObjectWithTag(curSquare2.ToString()).transform.position;
-        }
+        //if (spacesLeft == 1) // if you got a 2 card
+        //{
+        //    curSquare2 += 1;
+        //    curSquare2 = curSquare2 % 60; // if the number is 60, that sets it back to 0. so the board loops its normal spaces
+        //                                  /* movement of the physical piece updating its physical position based on the new curSquare. */
+        //    curPiece2.transform.position = GameObject.FindGameObjectWithTag(curSquare2.ToString()).transform.position;
+        //}
         #endregion
 
         GameManager.currentSquare = curSquare2; // update the gameManager version of currentSquare so that it now has curSquare2.

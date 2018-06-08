@@ -12,6 +12,9 @@ public class MoveForward : MonoBehaviour
     GameManager forSpaces;
     GameManager GM = new GameManager();
     EndOfTurn endTurn = new EndOfTurn();
+    int curSquare2;
+    GameObject curPiece2;
+    public int slideSpaces;
 
     // Use this for initialization
     void Start()
@@ -22,11 +25,11 @@ public class MoveForward : MonoBehaviour
     public void MovingForward()
     {
         int moveNum = CardDeck.card;
-        int curSquare2 = GameManager.currentSquare;
+        curSquare2 = GameManager.currentSquare;
         int curPlayer2 = GameManager.currentPlayer;
-        GameObject curPiece2 = GameManager.currentPiece;
+        curPiece2 = GameManager.currentPiece;
         int spacesLeft = moveNum;
-        int slideSpaces = 0;
+        slideSpaces = 0;
 
 
 
@@ -137,15 +140,8 @@ public class MoveForward : MonoBehaviour
                 slideSpaces += 4;
             }
         }
-        for (int Left = slideSpaces; Left > 0; Left--)
-        {
-            curSquare2 += 1;
-            curSquare2 = curSquare2 % 60; // if the number is 60, that sets it back to 0. so the board loops its normal spaces
-                                          /* movement of the physical piece updating its physical position based on the new curSquare. */
-            curPiece2.transform.position = GameObject.FindGameObjectWithTag(curSquare2.ToString()).transform.position;
 
-            Debug.Log("spaces left:" + Left);
-        }
+        Invoke("slideSpace", 1.0f);
         #endregion
 
 
@@ -186,6 +182,18 @@ public class MoveForward : MonoBehaviour
 
     }
 
+    public void slideSpace()
+    {
+        for (int Left = slideSpaces; Left > 0; Left--)
+        {
+            curSquare2 += 1;
+            curSquare2 = curSquare2 % 60; // if the number is 60, that sets it back to 0. so the board loops its normal spaces
+                                          /* movement of the physical piece updating its physical position based on the new curSquare. */
+            curPiece2.transform.position = GameObject.FindGameObjectWithTag(curSquare2.ToString()).transform.position;
+
+            Debug.Log("spaces left:" + Left);
+        }
+    }
 
 
     // Update is called once per frame
