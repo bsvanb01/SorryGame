@@ -8,9 +8,9 @@ using UnityEngine.UI;
 public class CardDeck : MonoBehaviour {
     public const int SORRY = 13;
     public static List<int> orgDeck = new List<int>()
-            { 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 7, 7, 7, 7, 8, 8, 8, 8, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, SORRY, SORRY, SORRY, SORRY };
+            { 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 7, 7, 7, 7, 8, 8, 8, 8, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12}; //ADD 4 SORRY'S HERE
     public List<int> curDeck = new List<int>()
-            { 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 7, 7, 7, 7, 8, 8, 8, 8, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, SORRY, SORRY, SORRY, SORRY };
+            { 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 7, 7, 7, 7, 8, 8, 8, 8, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12}; //ADD 4 SORRY'S HERE
     public static int card;
     public Material[] materialsArray = new Material[11];
     public static int cardCount = 0;
@@ -35,7 +35,7 @@ public class CardDeck : MonoBehaviour {
                     playerLabel = GameObject.Find("PlayerLabel");
                     playerLabel.GetComponent<Text>().text = "";
                     card = drawCard();
-                    card = 2;
+                    card = 12;
                     updateCard(card);
                     Invoke("zoomOut", 3.5f);
                 }

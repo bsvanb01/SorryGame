@@ -28,15 +28,16 @@ public class MoveForward : MonoBehaviour
         int spacesLeft = moveNum;
 
         #region Safety Zone
-        if ((curPlayer2 == 1 && curSquare + moveNum > 2 && (curSquare2 <= 2 || (curSquare2 >= 50 && curSquare2 < 60))) // that last one basically means it has to be in the range of 50 to 2 spacewise, and nothing else.
-        || (curPlayer2 == 2 && curSquare + moveNum > 17 && curSquare2 <= 17)
-        || (curPlayer2 == 3 && curSquare + moveNum > 32 && curSquare2 <= 32)
-        || (curPlayer2 == 4 && curSquare + moveNum > 47 && curSquare2 <= 47) && curPiece2.tag == "Normal") // if going into safety zone. has to be going to a space greater than their last normal space. and has to be currently on a space less than or equal to the last normal space.
+        if ((curPlayer2 == 1 && curSquare2 + moveNum > 2 && (curSquare2 <= 2 || (curSquare2 >= 50 && curSquare2 < 60))) // that last one basically means it has to be in the range of 50 to 2 spacewise, and nothing else.
+        || (curPlayer2 == 2 && curSquare2 + moveNum > 17 && curSquare2 <= 17)
+        || (curPlayer2 == 3 && curSquare2 + moveNum > 32 && curSquare2 <= 32)
+        || (curPlayer2 == 4 && curSquare2 + moveNum > 47 && curSquare2 <= 47) && curPiece2.tag == "Normal") // if going into safety zone. has to be going to a space greater than their last normal space. and has to be currently on a space less than or equal to the last normal space.
         {
-            while (curSquare2 != 2 || curSquare2 != 17 || curSquare2 != 32 || curSquare2 != 47)
+            while (curSquare2 != 2 && curSquare2 != 17 && curSquare2 != 32 && curSquare2 != 47)
             { // keep moving till you hit the space that makes you go into the safety zone
                 curSquare2 += 1;
-                curSquare2 = curSquare % 60; // if the number is 60, that sets it back to 0. so the board loops its normal spaces
+                curSquare2 = curSquare2 % 60; // if the number is 60, that sets it back to 0. so the board loops its normal spaces
+                curPiece2.transform.position = GameObject.FindGameObjectWithTag(curSquare2.ToString()).transform.position;
                 /* movement of the physical piece updating its physical position based on the new curSquare. */
                 spacesLeft -= 1; // subtract one from the spaces left
             }
@@ -57,13 +58,16 @@ public class MoveForward : MonoBehaviour
                     curSquare2 = 78;
                     break;
             }
-
+            curPiece2.transform.position = GameObject.FindGameObjectWithTag(curSquare2.ToString()).transform.position;
             while (spacesLeft != 0)
             {
-                curSquare += 1;
+                curSquare2 += 1;
                 spacesLeft -= 1;
+                curPiece2.transform.position = GameObject.FindGameObjectWithTag(curSquare2.ToString()).transform.position;
                 /* movement of the physical piece updating its physical position based on the new curSquare. */
             }
+
+            Debug.Log(curSquare2);
             #endregion
 
             #region Normal Movement

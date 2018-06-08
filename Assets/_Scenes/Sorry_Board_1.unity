@@ -3475,7 +3475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676468c6aed73604982f3a0efa13f8f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLabel: {fileID: 0}
 --- !u!114 &425164902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3487,7 +3486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e1279fbb994884dbea533fcf65a21d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLabel: {fileID: 0}
 --- !u!1 &429797119
 GameObject:
   m_ObjectHideFlags: 0
@@ -3628,7 +3626,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_TagString
-      value: Start
+      value: Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
@@ -8587,7 +8585,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 9a9d5672e75a0bf45ad3aecd0762ecb6, type: 2}
     - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_TagString
-      value: Start
+      value: Normal
       objectReference: {fileID: 0}
     - target: {fileID: 6400000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_Enabled
@@ -9827,7 +9825,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_TagString
-      value: Start
+      value: Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
@@ -14264,7 +14262,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
       propertyPath: m_TagString
-      value: Start
+      value: Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f74dc17fddc40b746961229b53fc1ccb, type: 3}
