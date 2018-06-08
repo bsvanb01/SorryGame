@@ -9,7 +9,7 @@ public class StartUI : MonoBehaviour {
 
     public void StartGame()
     {
-
+        Debug.Log("Clicked start");
         SceneManager.LoadScene("Sorry_Board_1");
 
     }
