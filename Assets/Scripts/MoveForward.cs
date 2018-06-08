@@ -26,6 +26,9 @@ public class MoveForward : MonoBehaviour
         int curPlayer2 = GameManager.currentPlayer;
         GameObject curPiece2 = GameManager.currentPiece;
         int spacesLeft = moveNum;
+        int slideSpaces = 0;
+
+
 
         #region Safety Zone
         if ((curPlayer2 == 1 && curSquare2 + moveNum > 2 && (curSquare2 <= 2 || (curSquare2 >= 50 && curSquare2 < 60))) // that last one basically means it has to be in the range of 50 to 2 spacewise, and nothing else.
@@ -63,6 +66,7 @@ public class MoveForward : MonoBehaviour
             {
                 curSquare2 += 1;
                 spacesLeft -= 1;
+                Debug.Log(spacesLeft);
                 curPiece2.transform.position = GameObject.FindGameObjectWithTag(curSquare2.ToString()).transform.position;
                 /* movement of the physical piece updating its physical position based on the new curSquare. */
             }
@@ -85,6 +89,65 @@ public class MoveForward : MonoBehaviour
             }
         }
         #endregion
+
+        #region Slide
+
+        if (curPlayer == 1)
+        {
+            if (curSquare2 == 16 || curSquare2 == 31 || curSquare2 == 46)
+            {
+                slideSpaces += 3;
+            }
+            else if (curSquare2 == 24 || curSquare2 == 39 || curSquare2 == 54)
+            {
+                slideSpaces += 4;
+            }
+        }
+        if (curPlayer == 2)
+        {
+            if (curSquare2 == 1 || curSquare2 == 31 || curSquare2 == 46)
+            {
+                slideSpaces += 3;
+            }
+            else if (curSquare2 == 9 || curSquare2 == 39 || curSquare2 == 54)
+            {
+                slideSpaces += 4;
+            }
+        }
+        if (curPlayer == 3)
+        {
+            if (curSquare2 == 1 || curSquare2 == 16 || curSquare2 == 46)
+            {
+                slideSpaces += 3;
+            }
+            else if (curSquare2 == 9 || curSquare2 == 24 || curSquare2 == 54)
+            {
+                slideSpaces += 4;
+            }
+
+        }
+        if (curPlayer == 4)
+        {
+            if (curSquare2 == 1 || curSquare2 == 16 || curSquare2 == 31)
+            {
+                slideSpaces += 3;
+            }
+            else if (curSquare2 == 9 || curSquare2 == 24 || curSquare2 == 39)
+            {
+                slideSpaces += 4;
+            }
+        }
+        for (int Left = slideSpaces; Left > 0; Left--)
+        {
+            curSquare2 += 1;
+            curSquare2 = curSquare2 % 60; // if the number is 60, that sets it back to 0. so the board loops its normal spaces
+                                          /* movement of the physical piece updating its physical position based on the new curSquare. */
+            curPiece2.transform.position = GameObject.FindGameObjectWithTag(curSquare2.ToString()).transform.position;
+
+            Debug.Log("spaces left:" + Left);
+        }
+        #endregion
+
 
         GameManager.currentSquare = curSquare2; // update the gameManager version of currentSquare so that it now has curSquare2.
                                                 //that will be passed onto curSquare, which is updated every frame.

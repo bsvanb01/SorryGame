@@ -156,11 +156,16 @@ public class GameManager : MonoBehaviour
         }
         #endregion
 
-        #region move backward
+        #region Move backward
         if (card == 4 || card == 10)
-        {
+        { 
             if (piece.tag == "Normal" || piece.tag == "Safe")
+            {
+                backButton.GetComponent<Button>().interactable = true;
                 anyMovement = true;
+            }
+            else
+                backButton.GetComponent<Button>().interactable = false;
         }
         #endregion
 

@@ -24,6 +24,8 @@ public class Player1Piece3 : MonoBehaviour
             {
                 if (hit.transform.name == "p1_Game_Piece_3" && PieceManager1.player1Active)
                 {
+                    Debug.Log("Cur square is : " + curSquare);
+
                     GameManager.currentPiece = GameObject.Find("p1_Game_Piece_3");
                     GameManager.currentPlayer = 1;
                     GameManager.currentSquare = curSquare;
