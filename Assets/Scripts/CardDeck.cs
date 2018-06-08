@@ -35,6 +35,7 @@ public class CardDeck : MonoBehaviour {
                     playerLabel = GameObject.Find("PlayerLabel");
                     playerLabel.GetComponent<Text>().text = "";
                     card = drawCard();
+                    card = 2;
                     updateCard(card);
                     Invoke("zoomOut", 3.5f);
                 }
@@ -47,7 +48,7 @@ public class CardDeck : MonoBehaviour {
         GameObject.FindGameObjectWithTag("MainCamera").transform.Translate(-3, 0, -15);
         int curPlayer = (GameManager.currentPlayer + 1) % 4;
         if (curPlayer == 0)
-            curPlayer = 1;
+            curPlayer = 4;
         playerLabel.GetComponent<Text>().text = "Player " + curPlayer;
         Invoke("playerChange", .5f);
     }
