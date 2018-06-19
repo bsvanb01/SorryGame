@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\PieceManager2.cs" />
      <Compile Include="Assets\Scripts\PieceManager3.cs" />
      <Compile Include="Assets\Scripts\PieceManager4.cs" />
+     <Compile Include="Assets\Scripts\Pieces\CheckMovement.cs" />
      <Compile Include="Assets\Scripts\Pieces\Player1Piece1.cs" />
      <Compile Include="Assets\Scripts\Pieces\Player1Piece2.cs" />
      <Compile Include="Assets\Scripts\Pieces\Player1Piece3.cs" />
