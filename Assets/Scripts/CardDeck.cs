@@ -35,7 +35,7 @@ public class CardDeck : MonoBehaviour {
                     playerLabel = GameObject.Find("PlayerLabel");
                     playerLabel.GetComponent<Text>().text = "";
                     card = drawCard();
-                    card = 3;
+                    //card = 11;
                     while(card == 13)
                     {
                         card = drawCard();

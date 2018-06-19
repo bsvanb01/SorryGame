@@ -91,6 +91,101 @@ public class MoveForward : MonoBehaviour
                 Debug.Log("spaces left:" + Left);
             }
         }
+
+        #region bump
+        //int nextSquare = curSquare2 + 1;
+        //GameObject bumpedPiece;
+        //string moveTo = "30";
+
+        //if(Player1Piece1.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p1_Game_Piece_1");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+        //else if (Player1Piece2.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p1_Game_Piece_2");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+        //else if (Player1Piece3.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p1_Game_Piece_3");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+        //else if (Player1Piece4.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p1_Game_Piece_4");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+        //else if (Player2Piece1.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p2_Game_Piece_1");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+        //else if (Player2Piece2.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p2_Game_Piece_2");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+        //else if (Player2Piece3.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p2_Game_Piece_3");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+        //else if (Player2Piece4.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p2_Game_Piece_4");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+        //else if (Player3Piece1.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p3_Game_Piece_1");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+        //else if (Player3Piece2.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p3_Game_Piece_2");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+        //else if (Player3Piece3.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p3_Game_Piece_3");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+        //else if (Player3Piece4.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p3_Game_Piece_4");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+        //else if (Player4Piece1.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p4_Game_Piece_1");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+        //else if (Player4Piece2.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p4_Game_Piece_2");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+        //else if (Player4Piece3.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p4_Game_Piece_3");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+        //else if (Player4Piece4.curSquare == nextSquare)
+        //{
+        //    bumpedPiece = GameObject.Find("p4_Game_Piece_4");
+        //    bumpedPiece.transform.position = GameObject.FindGameObjectWithTag(moveTo).transform.position;
+        //}
+
+        //curSquare2 += 1;
+        //curSquare2 = curSquare2 % 60; // if the number is 60, that sets it back to 0. so the board loops its normal spaces
+        //                                  /* movement of the physical piece updating its physical position based on the new curSquare. */
+        //curPiece2.transform.position = GameObject.FindGameObjectWithTag(curSquare2.ToString()).transform.position;
+
+        //Debug.Log("spaces left:" + 0);
+        #endregion
+        
         #endregion
 
         #region Slide
@@ -143,13 +238,24 @@ public class MoveForward : MonoBehaviour
 
         Invoke("slideSpace", 1.0f);
         #endregion
+    }
 
+    public void slideSpace()
+    {
+        for (int Left = slideSpaces; Left > 0; Left--)
+        {
+            curSquare2 += 1;
+            curSquare2 = curSquare2 % 60; // if the number is 60, that sets it back to 0. so the board loops its normal spaces
+                                          /* movement of the physical piece updating its physical position based on the new curSquare. */
+            curPiece2.transform.position = GameObject.FindGameObjectWithTag(curSquare2.ToString()).transform.position;
 
-        GameManager.currentSquare = curSquare2; // update the gameManager version of currentSquare so that it now has curSquare2.
-                                                //that will be passed onto curSquare, which is updated every frame.
+            Debug.Log("spaces left:" + Left);
+        }
+        GameManager.currentSquare = curSquare2;
 
         #region update home tag
-        if (curPiece2.tag == "Home") {
+        if (curPiece2.tag == "Home")
+        {
             if (curPlayer == 1)
             {
                 PieceManager1.piecesHome++;
@@ -174,25 +280,13 @@ public class MoveForward : MonoBehaviour
                 if (PieceManager4.piecesHome == 4)
                     GM.endGame();
             }
-            #endregion
-
         }
-
-        EndOfTurn.endOfTurn(curSquare2);
-
-    }
-
-    public void slideSpace()
-    {
-        for (int Left = slideSpaces; Left > 0; Left--)
+        #endregion
+        if(curPiece.tag == "Normal" && curSquare >= 60)
         {
-            curSquare2 += 1;
-            curSquare2 = curSquare2 % 60; // if the number is 60, that sets it back to 0. so the board loops its normal spaces
-                                          /* movement of the physical piece updating its physical position based on the new curSquare. */
-            curPiece2.transform.position = GameObject.FindGameObjectWithTag(curSquare2.ToString()).transform.position;
-
-            Debug.Log("spaces left:" + Left);
+            curPiece.tag = "Safe";
         }
+        EndOfTurn.endOfTurn(curSquare2);
     }
 
 

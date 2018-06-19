@@ -28,20 +28,6 @@ public class EndOfTurn : MonoBehaviour {
         GameManager.backButton.SetActive(false);
         GameManager.swapButton.SetActive(false);
 
-
-        //GameObject backButton = GameObject.Find("Move Backward");
-        //backButton.GetComponentInChildren<Text>().text = "";
-        //backButton.GetComponent<Image>().sprite = UIMask;
-        //backButton.GetComponent<Button>().interactable = false;
-
-
-        //GameObject swapButton = GameObject.Find("Swap");
-        //swapButton.GetComponentInChildren<Text>().text = "";
-        //swapButton.GetComponent<Image>().sprite = UIMask;
-        //swapButton.GetComponent<Button>().interactable = false;
-
-
-
         #endregion
 
         #region Set Current Square

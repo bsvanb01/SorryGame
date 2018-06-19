@@ -141,10 +141,18 @@ public class GameManager : MonoBehaviour
         #region move forward
         if (card == 1 || card == 2 || card == 3 || card == 5 || card == 7 || card == 8 || card == 10 || card == 11 || card == 12)
         {
-            if (piece.tag == "Normal" && curSquare > (startSquare + 46) % 60 && curSquare < (startSquare + 58) % 60)
+            if(player == 1 && piece.tag == "Normal" && (curSquare > 51 || (curSquare % 60) < 3))
             {
-                if ((curSquare + card) % 60 <= (startSquare + 64) % 60) // won't fit in the home spaces
+                if ((curSquare + card) % 60 <= 2) // won't fit in the home spaces
                     anyMovement = true;
+            }
+            else if ((player == 2 || player == 3 || player == 4) && piece.tag == "Normal" && curSquare > (startSquare + 46) % 60 && curSquare < (startSquare + 58) % 60)
+            {
+                if ((curSquare + card) % 60 > (startSquare + 64) % 60) { } // won't fit in the home spaces
+                else
+                {
+                    anyMovement = true;
+                }
             }
             else if (piece.tag == "Safe")
             {
